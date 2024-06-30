@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple 2 digit calc</title>
+    <link rel="stylesheet" href="css/base_style.css">
+    <link rel="stylesheet" href="css/1. Kalkulator-Mini.css".css">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/jslogo.jpeg" alt="Logo">
+            <p>Simple 2 digit calc</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <main class="container">
+            <header>
+                <h1>Hello world</h1>
+                <p>I hope this one works lmao</p>
+            </header>
+            <section>
+                <div id="calcBox">
+                    <input type="number" id="firstDigit" value="0"><br>
+                    <input type="number" id="secondDigit" value="0"><br>
+                    <div style="display: flex; flex-direction: row; gap: 10px;">
+                        <button id="plus" onclick="add()">+</button>
+                        <button id="minus" onclick="substract()">-</button>
+                        <button id="divide" onclick="dividedby()">/</button>
+                        <button id="multiply" onclick="multipliedby()">X</button>
+                        <button onclick="reset()">Reset</button>
+                    </div><br>
+                    <label id="out">Result</label>
+                    <br><br>
+                </div>
+            </section>
+            <section>
+                <h1>Script</h1>
+                <pre style="font-family: monospace;">
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const divide = document.getElementById("divide");
+const multiply = document.getElementById("multiply");
+let firstDigit = document.getElementById("firstDigit");
+let secondDigit = document.getElementById("secondDigit");
+let hasil;
+let result = document.getElementById("out");
+
+// add functions
+function add(){
+    firstDigit = Number(document.getElementById("firstDigit").value);
+    secondDigit = Number(document.getElementById("secondDigit").value);
+    hasil = firstDigit + secondDigit;
+    console.log(hasil)
+    result.textContent = `The Result = ${hasil}`
+}
+
+// substract function
+function substract(){
+    firstDigit = Number(document.getElementById("firstDigit").value);
+    secondDigit = Number(document.getElementById("secondDigit").value);
+    hasil = firstDigit - secondDigit;
+    console.log(hasil);
+    result.textContent = `The Result = ${hasil}`
+}
+
+// divide function
+function dividedby(){
+    firstDigit = Number(document.getElementById("firstDigit").value);
+    secondDigit = Number(document.getElementById("secondDigit").value);
+    hasil = firstDigit / secondDigit;
+    if (hasil == Infinity){
+        result.textContent = "Cannot divide by Zero."
+    }
+    else if(isNaN(hasil)){
+        result.textContent = "Error"
+    }
+    else{
+        console.log(hasil);
+        result.textContent = `The Result = ${hasil}`  
+    }
+}
+
+// multiply function
+function multipliedby(){
+    firstDigit = Number(document.getElementById("firstDigit").value);
+    secondDigit = Number(document.getElementById("secondDigit").value);
+    hasil = firstDigit * secondDigit;
+    console.log(hasil);
+    result.textContent = `The Result = ${hasil}`
+}
+
+//reset function
+function reset(){
+    result.textContent = "Result"
+    firstDigit.value = 0
+    secondDigit.value = 0
+}
+                </pre>
+            </section>
+        </main>
+    </main>
+    <footer>
+        <p>So sit back relax and enjoy the show</p>
+    </footer>
+    <script src="script/1. Kalkulator-Mini.js"></script>
+</body>
+</html>

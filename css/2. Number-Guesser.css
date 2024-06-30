@@ -1,0 +1,21 @@
+#box{
+    text-align: center;
+}
+
+#box button{
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s;
+}
+
+#box button:hover{
+    transform: translateY(3px);
+}
+
+#guess{
+    padding-left: 10px;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+}

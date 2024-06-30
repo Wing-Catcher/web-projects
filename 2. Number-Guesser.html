@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/2. Number-Guesser.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <img src="assets/jslogo.jpeg" alt="Logo">
+            <p>Number Guesser</p>
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><button>Homepage</button></a>
+        </div>
+    </nav>
+    <main class="margin">
+        <main class="container">
+            <header>
+                <h1>Guess The Random Number</h1>
+                <p>Its not perfect just trying my best :)</p>
+                <ul>
+                    <p><b>Features: </b></p>
+                    <li>Testing your luck</li>
+                    <li>yea, thats all</li>
+                </ul>
+            </header>
+            <section>
+                <div id="box">
+
+                    <h3>Guess the number 1 ~ 100</h3>
+                    <input type="number" id="guess" placeholder="1 ~ 100">
+                    <br><br>
+                    <button id="check" onclick="guesser()">Check Your answer!</button>
+                    <button id="reset" onclick="reset()">Reset</button>
+                    <p id="attempts"></p>
+                    <p id="answer"></p>
+
+
+                </div>
+            </section>
+        </main>
+    </main>
+    <footer>
+        <p>So sit back relax and enjoy the show</p>
+    </footer>
+    <script src="script/2. Number-Guesser.js"></script>
+</body>
+</html>

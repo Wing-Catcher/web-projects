@@ -1,0 +1,24 @@
+#calcBox {
+    margin: auto;
+    width: min-content;
+    text-align: center;
+}
+#firstDigit, #secondDigit{
+    height: 40px;
+    padding-left: 20px;
+    font-size: large;
+    border-radius: 10px;
+}
+#calcBox button{
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+#calcBox button:hover{
+    transform: translateY(3px);
+}
+#calcBox label{
+    font-size: large;
+}
