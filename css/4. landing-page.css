@@ -1,0 +1,101 @@
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(127, 178, 255);
+    background-image: url(/assets/walpaper3.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 2px red solid;
+    align-items: center;
+    padding: 10px 30px;
+    justify-content: space-between;
+    color: black;
+    background-color: aliceblue;
+}
+.nav-items img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-items #nav-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+.nav-items #nav-buttons button{
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: none;
+    
+}
+.nav-items #search{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+#container {
+    max-width: 900px;
+    min-width: 400px;
+    margin: auto;
+}
+
+main {
+    margin: 30px 200px;;
+}
+
+main #header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+main #header #intro{
+    padding: 30px;
+    background-color: rgba(206, 228, 243, 0.541);
+    color: rgb(27, 27, 27);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+main #header #intro button{
+    padding:  10px 20px;
+    font-size: 1.1em;
+    border-radius: 15px;
+    border: none;
+    background-color: hsl(16, 100%, 66%);
+    transition: all 0.1s;
+}
+main #header #intro button:hover{
+    transform: translateY(3px);
+}
+main #header #intro button:active{
+    background-color: hsl(16, 100%, 76%);
+}
+main section img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+main #grid1, #grid2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    color: aliceblue;
+}

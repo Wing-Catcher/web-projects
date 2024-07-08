@@ -1,0 +1,121 @@
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/assets/wallpaper2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+    color: aliceblue;
+}
+#nav-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 0px 20px 20px;
+    gap: 30px;
+}
+.nav-items img {
+    height: 30px;
+    width: 30px;
+}
+.nav-items #search{
+    font-size: 0.9em;
+    background-color: rgba(185, 185, 185, 0.205);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.nav-items{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#thin-line {
+    height: 30px;
+    width: 2px;
+    background-color: rgb(230, 173, 19);
+}
+#nav-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 180px;
+}
+#nav-bottom{
+    display: flex;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+#nav-bottom button{
+    border-radius: 100px;
+    border: none;
+    padding: 8px 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all 0.1s;
+    width: 100px;
+}
+#nav-bottom button:hover{
+    background-color: rgb(0, 191, 255);
+    width: 120px;
+    color: aliceblue;
+    font-weight: bold;
+}
+#nav-bottom button:active{
+    background-color: hsl(195, 100%, 70%);
+}
+#nav-bottom #thin-line{
+    height: 30px;
+    background-color: rgb(0, 191, 255);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+}
+section{
+    margin: auto;
+    max-width: 850px;
+    background-color: rgba(2, 2, 2, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#flex-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+#flex-row img{
+    border-radius: 10px;
+    max-width: 200px;
+}
+@media screen and (max-width: 600px){
+    #nav-bottom{
+        margin: 0px 30px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #nav-bottom button{
+        margin: auto;
+        width: 100%;
+    }
+    .nav-items #desc{
+        display: none;
+    }
+    #flex-row{
+        justify-content: center;
+    }
+}
