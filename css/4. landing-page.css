@@ -2,21 +2,21 @@ body {
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(127, 178, 255);
-    background-image: url(/assets/walpaper3.png);
+    background-image: url(/assets/wallpaper4.jpg);
     background-attachment: fixed;
     background-size: cover;
+    color: aliceblue
 }
 
 nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    border: 2px red solid;
     align-items: center;
-    padding: 10px 30px;
-    justify-content: space-between;
+    padding: 0px 30px;
+    justify-content: center;
     color: black;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
 }
 .nav-items img {
     height: 50px;
@@ -28,59 +28,39 @@ nav {
     align-items: center;
     gap: 10px;
 }
-.nav-items #nav-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 10px;
-    background-color: aquamarine;
-    border-radius: 10px;
+main{
+    margin: 30px 90px;
 }
-.nav-items #nav-buttons button{
-    padding: 5px 8px;
-    border-radius: 10px;
-    border: none;
-    
-}
-.nav-items #search{
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-}
-
-#container {
-    max-width: 900px;
-    min-width: 400px;
-    margin: auto;
-}
-
-main {
-    margin: 30px 200px;;
-}
-
 main #header{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
     align-items: center;
     gap: 20px;
 }
 main #header #intro{
     padding: 30px;
-    background-color: rgba(206, 228, 243, 0.541);
-    color: rgb(27, 27, 27);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: aliceblue;
     backdrop-filter: blur(10px);
     border-radius: 20px;
+    animation: scaleFade 1.5s 1s forwards;
+    transition: all 0.5s;
+}
+main #header #intro:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
 }
 main #header #intro button{
     padding:  10px 20px;
     font-size: 1.1em;
     border-radius: 15px;
     border: none;
-    background-color: hsl(16, 100%, 66%);
+    background-color: #C4E689;
     transition: all 0.1s;
+    cursor: pointer;
 }
 main #header #intro button:hover{
     transform: translateY(3px);
@@ -88,14 +68,165 @@ main #header #intro button:hover{
 main #header #intro button:active{
     background-color: hsl(16, 100%, 76%);
 }
-main section img {
+main #header img {
+    animation: scaleFade 1.5s 1s forwards;
+    transform: scale(0);
     width: 100%;
     border-radius: 20px;
 }
-
-main #grid1, #grid2{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    justify-items: center;
-    color: aliceblue;
+main #logos{
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    animation: scaleFade 1.5s 1s forwards;
+    transform: scale(0);
 }
+main #logo-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    justify-items: center;
+
+    img{
+        animation: moveUpDown 5s infinite;
+    }
+}
+main #lists {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    backdrop-filter: blur(10px);
+    animation: scaleFade 1.5s 1s forwards;
+    transform: scale(0);
+}
+#list1, #list2{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+#list1:hover, #list2:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    
+    li{
+        color: #C4E689;
+        list-style: square;
+    }
+}
+
+#projects{
+    #bottom{
+        text-align: center;
+    }
+}
+.projects-container{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-evenly;
+    animation: scaleFade 1.5s 1s forwards;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+    .project-texts{
+        width: 600px;
+    }
+    .project-image{
+        text-align: center;
+        img{
+            width: 350px;
+            border-radius: 10px;
+        }
+        button{
+            padding:  10px 20px;
+            font-size: 1.1em;
+            border-radius: 15px;
+            border: none;
+            background-color: #C4E689;
+            transition: all 0.1s;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+        button:hover{
+            transform: translateY(3px);
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 90px;
+    color: black;
+    
+    #title{
+        font-size: 1.1em;
+        font-weight: 600;
+        #credit{
+            font-size: 0.8em;
+            font-weight: 400;
+        }
+    }
+    #icons{
+        font-size: 1.5em;
+    }
+}
+
+@keyframes scaleFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    main{
+        margin: 30px;
+    }
+    main #logo-grid img{
+        height: 70px;
+    }
+    .projects-container{
+        flex-wrap: wrap-reverse;
+
+        .project-image img{
+            width: 100%;
+        }
+    }
+    footer {
+        padding: 10px 30px;
+
+        #title{
+            width: 150px;
+        }
+    }
+}
+
