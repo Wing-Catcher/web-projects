@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(127, 178, 255);
+    background-color: rgb(34, 34, 34);
     background-image: url(/assets/wallpaper4.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -46,7 +46,8 @@ main #header #intro{
     backdrop-filter: blur(10px);
     border-radius: 20px;
     animation: scaleFade 1.5s 1s forwards;
-    transition: all 0.5s;
+    transition:  0.5s;
+    opacity: 0;
 }
 main #header #intro:hover{
     background-color: rgba(0, 0, 0, 0.3);
@@ -70,7 +71,7 @@ main #header #intro button:active{
 }
 main #header img {
     animation: scaleFade 1.5s 1s forwards;
-    transform: scale(0);
+    opacity: 0;
     width: 100%;
     border-radius: 20px;
 }
@@ -81,7 +82,7 @@ main #logos{
     border-radius: 20px;
     backdrop-filter: blur(10px);
     animation: scaleFade 1.5s 1s forwards;
-    transform: scale(0);
+    opacity: 0;
 }
 main #logo-grid{
     display: grid;
@@ -89,7 +90,7 @@ main #logo-grid{
     justify-items: center;
 
     img{
-        animation: moveUpDown 5s infinite;
+        animation: moveUpDown 3.5s infinite;
     }
 }
 main #lists {
@@ -98,7 +99,7 @@ main #lists {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     backdrop-filter: blur(10px);
     animation: scaleFade 1.5s 1s forwards;
-    transform: scale(0);
+    opacity: 0;
 }
 #list1, #list2{
     padding: 10px;
@@ -126,6 +127,7 @@ main #lists {
 .projects-container{
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     padding: 30px;
     display: flex;
@@ -134,7 +136,7 @@ main #lists {
     gap: 30px;
     justify-content: space-evenly;
     animation: scaleFade 1.5s 1s forwards;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
     transition: all 0.5s;
     .project-texts{
         width: 600px;
@@ -158,6 +160,30 @@ main #lists {
         }
         button:hover{
             transform: translateY(3px);
+        }
+    }
+}
+
+.educations-container{
+    max-width: 800px;
+    margin: auto;
+    .education{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        animation: scaleFade 1.5s 1s forwards;
+        opacity: 0;
+        transition: all 0.5s;
+
+
+        .year{
+            text-align: center;
+            margin: 20px;
         }
     }
 }
@@ -208,8 +234,20 @@ footer {
   }
 
 @media only screen and (max-width: 600px) {
+    nav{
+        .nav-items{
+            font-size: 0.7em;
+            img{
+                height: 40px;
+                width: 40px;
+            };
+        }
+    }
     main{
         margin: 30px;
+    }
+    main #logos{
+        font-size: smaller;
     }
     main #logo-grid img{
         height: 70px;
@@ -229,4 +267,3 @@ footer {
         }
     }
 }
-

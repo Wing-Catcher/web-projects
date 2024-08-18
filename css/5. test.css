@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(54, 54, 54);
+    color: aliceblue;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/assets/beautiful.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    nav{
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(240, 248, 255, 0.3);
+        backdrop-filter: blur(10px);
+        color: aliceblue;
+        .nav-items{
+            button{
+                border-radius: 10px;
+                border: none;
+                padding:  5px 10px;
+                transition: all 0.2s;
+                background-color: rgb(0, 183, 255);
+            }
+            button:hover{
+                transform: translateY(2px);
+                background-color: hsl(197, 100%, 60%);
+            }
+            p{
+                display: inline;
+                font-size: 1.2em;
+                font-weight: 700;
+                
+            }
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        img{
+            width: 50px;
+            border-radius: 20px;
+        }
+    }
+}
